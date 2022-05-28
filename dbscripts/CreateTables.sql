@@ -2,7 +2,7 @@ Create database Hospital_Management;
  Use Hospital_Management;
 
 -- Physician Table creation script.
-CREATE TABLE Hospital_Management.dbo.physician
+CREATE TABLE physician
 (  
     employeeID int Primary Key,
     Name text NOT NULL,  
@@ -11,7 +11,7 @@ CREATE TABLE Hospital_Management.dbo.physician
     );
 
 -- Medication Table creation script.
-CREATE TABLE Hospital_Management.dbo.medication
+CREATE TABLE medication
 (  
     code int Primary Key,
     name text NOT NULL,  
@@ -20,7 +20,7 @@ CREATE TABLE Hospital_Management.dbo.medication
     );
 
 -- Nurse Table creation script.
-CREATE TABLE Hospital_Management.dbo.nurse
+CREATE TABLE nurse
 (  
     employeeID int Primary Key,
     Name text NOT NULL,  
@@ -30,7 +30,7 @@ CREATE TABLE Hospital_Management.dbo.nurse
     );
 
 -- Procedures Table creation script.
-CREATE TABLE Hospital_Management.dbo.procedures
+CREATE TABLE procedures
 (  
     code int Primary Key,
     Name text NOT NULL,  
@@ -38,7 +38,7 @@ CREATE TABLE Hospital_Management.dbo.procedures
     );
 
 -- block Table creation script.
-CREATE TABLE Hospital_Management.dbo.block
+CREATE TABLE block
 (  
     blockfloor int,
     blockcode int,
@@ -46,7 +46,7 @@ CREATE TABLE Hospital_Management.dbo.block
     );
 
 -- department Table creation script.
-CREATE TABLE Hospital_Management.dbo.department
+CREATE TABLE department
 (  
     departmentID int Primary Key,
     Name text NOT NULL,  
@@ -55,7 +55,7 @@ CREATE TABLE Hospital_Management.dbo.department
     );
 
 -- Trained-In Table creation script.
-CREATE TABLE Hospital_Management.dbo.trained_in
+CREATE TABLE trained_in
 (  
     physician int,
     procedure_id int,  
@@ -67,7 +67,7 @@ CREATE TABLE Hospital_Management.dbo.trained_in
 	);
 
 -- Patient Table creation script.
-CREATE TABLE Hospital_Management.dbo.patient
+CREATE TABLE patient
 (  
     ssn int PRIMARY KEY,
     name text,  
@@ -79,7 +79,7 @@ CREATE TABLE Hospital_Management.dbo.patient
 	);
 
 -- appointment Table creation script.
-CREATE TABLE Hospital_Management.dbo.appointment
+CREATE TABLE appointment
 (  
     appointmentid int PRIMARY KEY,
     patient int,  
@@ -94,7 +94,7 @@ CREATE TABLE Hospital_Management.dbo.appointment
 	);
 
 -- Affiliated_with Table creation script.
-CREATE TABLE Hospital_Management.dbo.affiliated_with
+CREATE TABLE affiliated_with
 (  
     physician int,
     department int,  
@@ -105,7 +105,7 @@ CREATE TABLE Hospital_Management.dbo.affiliated_with
 	);
 
 -- on_call Table creation script.
-CREATE TABLE Hospital_Management.dbo.on_call
+CREATE TABLE on_call
 (  
     nurse int,
     blockfloor int,  
@@ -118,7 +118,7 @@ CREATE TABLE Hospital_Management.dbo.on_call
 	);
 
 -- room Table creation script.
-CREATE TABLE Hospital_Management.dbo.room
+CREATE TABLE room
 (  
     roomnumber int PRIMARY KEY,
     roomtype text,  
@@ -129,7 +129,7 @@ CREATE TABLE Hospital_Management.dbo.room
 	);
 
 -- Stay Table creation script.
-CREATE TABLE Hospital_Management.dbo.stay
+CREATE TABLE stay
 (  
     stayid int PRIMARY KEY,
     patient int,  
@@ -141,7 +141,7 @@ CREATE TABLE Hospital_Management.dbo.stay
 	);
 
 -- undergoes Table creation script.
-CREATE TABLE Hospital_Management.dbo.undergoes
+CREATE TABLE undergoes
 (  
     patient int,
     procedure_id int,  
@@ -159,7 +159,7 @@ CREATE TABLE Hospital_Management.dbo.undergoes
 
 
 -- prescribes Table creation script.
-CREATE TABLE Hospital_Management.dbo.prescribes
+CREATE TABLE prescribes
 (  
     physician int,
     patient int,  
