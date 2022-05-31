@@ -1,0 +1,37 @@
+{
+  "name": "hospital-management",
+  "version": "1.0.0",
+  "description": "Hospital Management",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
+    "dev": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ayush-adhikari/Hospital-Management.git"
+  },
+  "keywords": [
+    "Express",
+    "React"
+  ],
+  "author": "Atul Dubey Ayush Adhikari",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ayush-adhikari/Hospital-Management/issues"
+  },
+  "homepage": "https://github.com/ayush-adhikari/Hospital-Management#readme",
+  "dependencies": {
+    "body-parser": "^1.20.0",
+    "cookie-parser": "^1.4.6",
+    "dotenv": "^16.0.1",
+    "express": "^4.18.1",
+    "express-fileupload": "^1.4.0",
+    "mariadb": "^3.0.0",
+    "sequelize": "^6.20.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.16"
+  }
+}

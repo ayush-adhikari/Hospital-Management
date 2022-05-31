@@ -1,5 +1,5 @@
 Create database Hospital_Management;
- Use Hospital_Management;
+Use Hospital_Management;
 
 -- Physician Table creation script.
 CREATE TABLE physician
@@ -34,7 +34,7 @@ CREATE TABLE procedures
 (  
     code int Primary Key,
     Name text NOT NULL,  
-    cost real,
+    cost real
     );
 
 -- block Table creation script.
